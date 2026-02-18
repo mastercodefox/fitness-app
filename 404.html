@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fitness App</title>
+    <script type="text/javascript">
+      // Перенаправляем все запросы на index.html для SPA
+      var path = window.location.pathname;
+      var search = window.location.search;
+      
+      // Убираем /fitness-app из пути, если он есть
+      var basePath = path.replace('/fitness-app', '');
+      
+      // Перенаправляем с якорем для HashRouter
+      window.location.replace('/fitness-app/index.html#' + basePath + search);
+    </script>
+  </head>
+  <body>
+    Redirecting to app...
+  </body>
+</html>
